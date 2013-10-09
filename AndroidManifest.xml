@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+          package="com.android.picasawebalbum"
+          android:versionCode="1"
+          android:versionName="1.0.0">
+          
+  	<uses-permission android:name="android.permission.INTERNET" />
+  	<uses-permission android:name="android.permission.GET_ACCOUNTS" />
+  	<uses-permission android:name="android.permission.USE_CREDENTIALS" />
+  	<uses-permission android:name="android.permission.MANAGE_ACCOUNTS" />
+  	<uses-permission android:name="android.permission.AUTHENTICATE_ACCOUNTS" />  	
+          
+	<supports-screens
+          android:largeScreens="true"
+          android:normalScreens="false"
+          android:smallScreens="false">        
+	</supports-screens>   
+
+	<application android:icon="@drawable/picasa_icon" 
+	    android:debuggable="true"
+	    android:label="@string/app_name"
+	    android:theme="@android:style/Theme.Black.NoTitleBar">
+      
+    	<activity android:name=".PicasaWebAlbum"
+              android:label="@string/app_name">
+            
+			<intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>    	    
+    	    
+    	</activity>
+    	
+		<activity android:name=".oauth.OAuthAccessTokenActivity" android:launchMode="singleTask">>
+			<intent-filter>
+				<action android:name="android.intent.action.VIEW" />
+				<category android:name="android.intent.category.DEFAULT" />
+				<category android:name="android.intent.category.BROWSABLE" />
+				<data android:scheme="http" android:host="localhost"  />
+			</intent-filter>
+		</activity>
+            
+    	<activity android:name=".AlbumList"></activity>
+    
+		<activity android:name=".PhotoList"></activity>
+        
+	    <activity android:name=".PhotoShow"></activity>
+    
+	        
+		<service android:label="@string/service_name"
+				android:name=".GoogleAuthenticator.AuthenticatorService"
+				android:process=":GoogleAccountAuthenticator">
+			
+				<intent-filter>
+					<action android:name="android.accounts.AccountAuthenticator"/>
+				</intent-filter>
+		    
+				<meta-data
+						android:name="android.accounts.AccountAuthenticator"
+						android:resource="@xml/authenticator"/>
+				    
+		</service>
+		
+		<activity
+			android:excludeFromRecents="true"
+			android:noHistory="true"
+			android:icon="@drawable/icon"
+			android:label="@string/add_account_activity"
+			android:stateNotNeeded="true"
+			android:multiprocess="true"
+			android:exported="true"
+			android:name=".GoogleAuthenticator.AddAccountActivity"/>
+		    		
+		<activity
+			android:launchMode="singleTask"
+			android:name=".GoogleAuthenticator.ActiveAuthenticationsActivity"/>
+		
+  	</application>  
+	    
+  
+</manifest> 

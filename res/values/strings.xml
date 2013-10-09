@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>  
+  <string name="app_name">Picasa Web Album</string>
+  <string name="str_title">Picasa Web Album</string>
+  <string name="str_text">Account：</string>
+  <string name="str_button">OK</string>
+  <string name="program_loading">Loading....</string>
+  
+  <string name="cancel">Cancel</string>
+    <string name="friendly_action_add_account">Adding Account: </string>
+    <string name="add_account_activity">Add Account</string>
+    <string name="login">Login</string>
+    <string name="google_username">Google Username</string>
+    <string name="google_account_password">Google Password</string>
+    <string name="google_account_credential_request">Please enter your Google username and password.</string>
+    <string name="service_name">Google Account Authenticator</string>
+        
+        
+	<string name="authenticator_label">Authenticator</string>
+        
+	<string name="error_unsupported_account_type">This authenticator does not support accounts of the supplied type.</string>
+    <string name="error_unsupported_auth_token_type">This authenticator does not provide auth tokens of the supplied type.</string>
+    <string name="error_unsupported_features">This authenticator does not provide auth tokens for the requested features.</string>
+    <string name="prefernces_title">Google Account Authenticator Preferences</string>
+    <string name="preferences_key1_action">Preferences Key 1 Action</string>
+    <string name="preferences_key1_summary">Preferences Key 1 Summary</string>
+
+	<string name="error_account_not_found">Account Not Found</string>
+	<string name="authenticating_notification_message_short">Authenticating Google Account...</string>
+	<string name="authenticating_notification_message_long">Click to cancel.</string>
+	<string name="error_user_canceled">User canceled authentication.</string>
+	<string name="friendly_action_canceled">Canceling</string>
+	<string name="unknown_account_name">Unknown</string>
+</resources>

@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	android:id="@+id/photoshow"
+    android:orientation="vertical"
+    android:layout_width="fill_parent" 
+    android:layout_height="fill_parent"
+    android:background="@drawable/black">
+    
+  <ImageSwitcher
+      android:id="@+id/switcher"
+      android:layout_width="fill_parent"
+      android:layout_height="fill_parent"
+      android:layout_marginLeft="5px" 
+	  android:layout_marginRight="5px" 
+	  android:layout_marginTop="3px" 
+	  android:layout_marginBottom="3px" 
+	  android:minHeight="720px" 
+	  android:minWidth="1280px"
+      android:background="@drawable/black"      
+      android:gravity="center_vertical" />
+
+  		<LinearLayout
+		    android:id="@+id/photo_progress_indicator"
+		    android:layout_width="127dp"
+		    android:layout_height="wrap_content"
+		    android:layout_marginTop="630px"
+			android:layout_marginLeft="20px"		    
+		    android:orientation="vertical" >
+		    
+		    <TextView
+			    android:layout_width="wrap_content"
+			    android:layout_height="wrap_content"
+			    android:paddingTop="5dip"
+			    android:text="@string/program_loading"
+			    android:textColor="#ffffffff"
+			    android:textSize="14sp" />
+		    
+		</LinearLayout>
+  
+</RelativeLayout>

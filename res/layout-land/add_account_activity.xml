@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:orientation="vertical"
+        android:layout_width="fill_parent"
+        android:layout_gravity="center_vertical"
+        android:layout_height="wrap_content">
+        <TextView
+                android:layout_height="wrap_content"
+                android:layout_width="fill_parent"
+                android:layout_margin="5px"
+                android:text="@string/google_account_credential_request"/>
+        <EditText
+                android:layout_height="wrap_content"
+                android:layout_width="fill_parent"
+                android:id="@+id/username_edit_text"
+                android:hint="@string/google_username"
+                android:layout_margin="5px"/>
+        <EditText
+                android:layout_height="wrap_content"
+                android:layout_width="fill_parent"
+                android:id="@+id/password_edit_text"
+                android:hint="@string/google_account_password"
+                android:layout_margin="5px"
+                android:inputType="textPassword"/>
+        <LinearLayout
+                android:id="@+id/LinearLayout01"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                <Button
+                        android:layout_height="wrap_content"
+                        android:text="@string/cancel"
+                        android:layout_weight="1"
+                        android:layout_width="fill_parent" android:id="@+id/cancel_button"/>
+                <Button
+                        android:layout_height="wrap_content"
+                        android:text="@string/login"
+                        android:layout_width="fill_parent"
+                        android:layout_weight="1" android:id="@+id/login_button"/>
+        </LinearLayout>
+</LinearLayout>
